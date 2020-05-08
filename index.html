@@ -47,7 +47,7 @@
                                 <a href="#">Связаться</a>
                                 <a class="user_in" href="#">
                                     <i class="fa fa-user" aria-hidden="true"></i>
-                                     Войти
+                                    Войти
                                 </a>
 
                             </nav>
@@ -104,17 +104,40 @@
         <section class="section_mailing">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-12 col-md-6">
-                        <p>Подпишись на Email-рассылку, чтобы быть в курсе акций и новостей</p>
+                    <div class="col-12 col-md-4">
+                        <p>Есть вопросы? Свяжитесь с нами:</p>
                     </div>
-                    <div class="col-12 col-md-3">
-                        <input class="mailing_email" type="email" id="mailing_email" placeholder="Email">
-                    </div>
-                    <div class="col-12 col-md-2">
+                    <div class="col-12 col-md-8">
+                        <form autocomplete="off" class="form_contact">
+                            <div class="form_message">
+                                <div class="contact_block">
+                                    <div class="input_row">
+                                        <input type="text" name="name" id="name" autocomplete="off" required />
+                                        <label for="name">Name</label>
+                                    </div>
+                                    <div class="input_row">
+                                        <input type="email" name="email" id="email" autocomplete="off" required />
+                                        <label for="email">Email</label>
+                                    </div>
+                                    <div class="input_row">
+                                        <input type="tel" name="phone" id="phone" autocomplete="off" />
+                                        <label for="phone">Phone</label>
+                                    </div>
+                                </div>
+                                <div class="message_block">
+                                    <div class="input_row">
+                                        <textarea name="message" id="message" autocomplete="off" required></textarea>
+                                        <label for="message">Message</label>
+                                    </div>
 
-                        <button type="button" class="btn btn-outline-secondary my_btn orange_btn">Подписаться</button>
-                    </div>
+                                    <button type="submit"
+                                        class="btn btn-outline-secondary my_btn orange_btn">Отправить</button>
 
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
                 </div>
             </div>
         </section>
@@ -630,6 +653,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
+
+    <script src="./js/main.js"></script>
 
 </body>
 

@@ -15,27 +15,94 @@
         color: @white;
     }
 
-    .my_btn {
-        height: 75px;
+    .form_message {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        &>div {
+            width: 48%;
+        }
+
+        .message_block {
+            .input_row {
+                height: calc(60% - 1px);
+                margin-bottom: 20px;
+            }
+
+            .my_btn {
+                width: 50%;
+                float: right;
+            }
+        }
+
+        .input_row {
+            position: relative;
+            margin-bottom: 40px;
+
+            label {
+                position: absolute;
+                left: 12px;
+                font-size: 2.4rem;
+                font-family: 'Oswald Regular';
+                color: @input_color;
+                top: 0;
+                transition: top .5s ease 0s;
+
+                &.change_input {
+                    top: -40px;
+                }
+            }
+
+            input,
+            textarea {
+                border: none;
+                border-bottom: 2px solid @input_color;
+                width: 100%;
+                font-size: 2.4rem;
+                font-family: 'Oswald Regular';
+                color: @orange;
+                background-color: transparent;
+
+                &:focus {
+                    outline: none;
+                    border-bottom-color: @orange;
+                }
+
+                &:focus+label {
+                    color: #ff8b38;
+
+                    &:not(.change_input) {
+                        top: -40px;
+                    }
+                }
+
+                @-webkit-keyframes autofill {
+                    to {
+                        color: @orange;
+                        background: transparent;
+                    }
+                }
+
+                &:-webkit-autofill {
+                    -webkit-animation-name: autofill;
+                    -webkit-animation-fill-mode: both;
+                }
+            }
+
+            textarea {
+                resize: none;
+                height: 100%;
+                padding: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+
+        }
     }
 
-
-    .mailing_email {
-        padding: 0 20px;
-        height: 75px;
-        width: 100%;
-        background-color: transparent;
-        color: @input_color;
-
-        font-size: 2.4rem;
-        font-family: 'Oswald Regular';
-        margin-right: 20px;
-    }
-
-    .mailing_email:focus {
-        outline: none;
-        border-color: @orange;
-    }
 
 }
-
