@@ -1,0 +1,80 @@
+// main: ../styles.less
+
+.section_review {
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    h3 {
+        text-align: center;
+        font-family: 'Oswald Medium';
+        font-size: 4.8rem;
+        line-height: 150%;
+        letter-spacing: 1%;
+
+        margin-bottom: 20px;
+    }
+
+    .carousel_review {
+
+        .chevron_control {
+            color: @mailing_bg;
+            font-size: 7.8rem;
+            opacity: 1;
+
+            &:hover {
+                //opacity: .7;
+                color: @orange;
+
+                -webkit-text-stroke: 4px @mailing_bg;
+
+            }
+        }
+
+        .carousel-inner {
+
+            width: 70%;
+            margin: 0 auto;
+
+            .review_block {
+                display: flex;
+
+                .review {
+                    padding-left: 60px;
+
+                    .quote_review {
+                        font-family: 'Roboto Medium Italic';
+                        color: @input_color;
+                        font-size: 2.4rem;
+                    }
+
+                    .autor_review {
+                        padding-left: 90px;
+                        font-family: 'Roboto Bold Italic';
+                        color: @mailing_bg;
+                        font-size: 3.6rem;
+                        position: relative;
+
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            width: 70px;
+                            height: 2px;
+                            background-color: @orange;
+                        }
+                    }
+                }
+
+
+
+                img {
+                    border-radius: 50%;
+                    height: 200px;
+                }
+            }
+        }
+
+    }
+}

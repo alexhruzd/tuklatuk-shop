@@ -1,0 +1,75 @@
+// main: ../styles.less
+
+.section_intro {
+    padding-top: 40px;
+    padding-bottom: 75px;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("@{img_path}/intro_cottage.png");
+    background-size: cover;
+
+    header {
+        margin-bottom: 220px;
+
+        a {
+            text-decoration: none;
+            color: @white;
+            display: inline-block;
+
+            font-family: 'Oswald Regular';
+            font-size: 2rem;
+
+            margin-right: 40px;
+
+            &:hover {
+                color: @orange;
+            }
+        }
+
+        .user_in {
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 2px;
+
+                left: -30%;
+
+                background-color: @orange;
+            }
+        }
+    }
+
+    .info_intro {
+        color: @white;
+        font-family: 'Oswald Bold';
+
+        .title {
+            font-size: 9.6rem;
+            line-height: 115%;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        .stroke {
+            color: transparent;
+            -webkit-text-stroke: 1px @white;
+
+            margin-bottom: 60px;
+        }
+
+        .info {
+            font-family: 'Roboto Regular';
+            font-size: 1.6rem;
+            line-height: 160%;
+
+            margin-bottom: 60px;
+        }
+
+        .inro_btn_block {
+            margin-bottom: 90px;
+        }
+    }
+}

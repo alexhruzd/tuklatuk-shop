@@ -1,0 +1,82 @@
+// out: ../css/styles.css
+
+@import 'variables';
+@import 'fonts';
+
+@import 'sections/section_intro.less';
+@import 'sections/section_mailing.less';
+@import 'sections/section_questions.less';
+@import 'sections/section_exterior.less';
+@import 'sections/section_footer.less';
+@import 'sections/section_review.less';
+
+html {
+    font-size: @fsize_global;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.main_container {
+    max-width: 1920px;
+    margin: 0 auto;
+
+    overflow: hidden;
+}
+
+.my_btn {
+    border: none;
+    border-radius: 0;
+    border: 1px solid @orange;
+
+    font-family: 'Oswald Regular';
+    font-size: 2.4rem;
+
+    width: 100%;
+    padding: 20px 0;
+}
+
+.orange_btn {
+    color: @white;
+    background-color: @orange;
+}
+
+.transparent_btn {
+    background-color: transparent;
+    color: @orange;
+}
+
+.transparent_btn:hover,
+.orange_btn:hover {
+    background-color: darken(@orange, 30%);
+    border: 1px solid @orange;
+}
+
+.social_nav {
+    a {
+        margin-right: 20px;
+    }
+
+    i {
+        font-size: 2.8rem;
+        color: @white;
+
+        &:hover {
+            color: @orange;
+        }
+    }
+
+}
+
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1780px;
+    }
+}
+
+.container-fluid {
+    padding: 0;
+}

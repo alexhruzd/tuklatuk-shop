@@ -1,0 +1,92 @@
+// main: ../styles.less
+
+.section_exterior {
+
+    .carousel_exterior {
+        position: relative;
+
+        .slide_item {
+
+            .img_slide {
+                width: 60%;
+                float: right;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .info_slide {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 50%;
+                height: 60%;
+
+                top: 50%;
+                left: 0;
+                transform: translate(0, -50%);
+
+                color: @white;
+                background: linear-gradient(rgba(1, 1, 1, 0.8), rgba(1, 1, 1, 0.8));
+
+                padding: 0 80px;
+
+                h3 {
+                    font-family: 'Oswald Medium';
+                    font-size: 4.8rem;
+                    margin-bottom: 40px;
+                }
+
+                p {
+                    font-family: 'Roboto Regular';
+                    font-size: 1.6rem;
+                }
+            }
+        }
+
+        .control_block {
+            position: absolute;
+            bottom: 0;
+            display: flex;
+
+            .arrow_control {
+                position: relative;
+                width: 50px;
+                height: 30px;
+                opacity: 1;
+
+                :hover {
+                    opacity: .7;
+
+                }
+            }
+
+            .arrow_prev {
+                .arrow_icon {
+                    background-image: url("@{img_path}/arrow_prev.png");
+                    background-size: cover;
+                    background-position: center;
+
+                    width: 100%;
+                    height: 100%;
+
+                }
+            }
+            .arrow_next {
+                .arrow_icon {
+                    background-image: url("@{img_path}/arrow_next.png");
+                    background-size: cover;
+                    background-position: center;
+
+                    width: 100%;
+                    height: 100%;
+
+                }
+            }
+
+        }
+    }
+}
