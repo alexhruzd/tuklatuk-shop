@@ -277,29 +277,68 @@
   position: absolute;
   bottom: 0;
   display: flex;
+  width: 15%;
+  left: 22%;
+  bottom: 5%;
+  /*.arrow_control {
+                position: relative;
+                width: 50px;
+                height: 30px;
+                opacity: 1;
+
+                :hover {
+                    opacity: .7;
+
+                }
+            }
+
+            .arrow_prev {
+                .arrow_icon {
+                    background-image: url("@{img_path}/arrow_prev.png");
+                    background-size: cover;
+                    background-position: center;
+
+                    width: 100%;
+                    height: 100%;
+
+                }
+            }
+            .arrow_next {
+                .arrow_icon {
+                    background-image: url("@{img_path}/arrow_next.png");
+                    background-size: cover;
+                    background-position: center;
+
+                    width: 100%;
+                    height: 100%;
+
+                }
+            }*/
+}
+.section_exterior .carousel_exterior .control_block .num_slide_block {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.section_exterior .carousel_exterior .control_block .num_slide_block span {
+  color: #111111;
+  font-size: 4.8rem;
+  font-family: 'Oswald Regular';
+  line-height: 150%;
+  letter-spacing: 1%;
+}
+.section_exterior .carousel_exterior .control_block .num_slide_block span.count_white {
+  color: #ffffff;
+  -webkit-text-stroke: 1px #111111;
 }
 .section_exterior .carousel_exterior .control_block .arrow_control {
-  position: relative;
-  width: 50px;
-  height: 30px;
+  color: #111111;
+  font-size: 7.8rem;
   opacity: 1;
 }
-.section_exterior .carousel_exterior .control_block .arrow_control :hover {
-  opacity: 0.7;
-}
-.section_exterior .carousel_exterior .control_block .arrow_prev .arrow_icon {
-  background-image: url("../img/arrow_prev.png");
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 100%;
-}
-.section_exterior .carousel_exterior .control_block .arrow_next .arrow_icon {
-  background-image: url("../img/arrow_next.png");
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 100%;
+.section_exterior .carousel_exterior .control_block .arrow_control:hover {
+  color: #f8902f;
+  -webkit-text-stroke: 4px #111111;
 }
 footer .contact_block {
   width: 100%;

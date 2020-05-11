@@ -51,8 +51,45 @@
             position: absolute;
             bottom: 0;
             display: flex;
+            width: 15%;
+            left: 22%;
+            bottom: 5%;
+
+            .num_slide_block {
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                span {
+                    color: @mailing_bg;
+                    font-size: 4.8rem;
+                    font-family: 'Oswald Regular';
+                    line-height: 150%;
+                    letter-spacing: 1%;
+
+                    &.count_white {
+                        color: @white;
+                        -webkit-text-stroke: 1px @mailing_bg;
+                    }
+                }
+            }
+
 
             .arrow_control {
+                color: @mailing_bg;
+                font-size: 7.8rem;
+                opacity: 1;
+
+                &:hover {
+                    //opacity: .7;
+                    color: @orange;
+
+                    -webkit-text-stroke: 4px @mailing_bg;
+
+                }
+            }
+
+            /*.arrow_control {
                 position: relative;
                 width: 50px;
                 height: 30px;
@@ -85,7 +122,7 @@
                     height: 100%;
 
                 }
-            }
+            }*/
 
         }
     }
