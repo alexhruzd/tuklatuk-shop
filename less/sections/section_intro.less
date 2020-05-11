@@ -11,35 +11,66 @@
     header {
         margin-bottom: 220px;
 
-        a {
-            text-decoration: none;
-            color: @white;
-            display: inline-block;
+        .menu_nav {
 
-            font-family: 'Oswald Regular';
-            font-size: 2rem;
+            .navbar-toggler {
+                border-color: @white;
+                margin-bottom: 20px;
+                margin-left: 40px;
+            }
 
-            margin-right: 40px;
 
-            &:hover {
-                color: @orange;
+            .navbar-collapse {
+                justify-content: flex-end;
+
+                &.show,
+                &.collapsing {
+                    .user_in::before {
+                        width: 0;
+                    }
+
+                }
+            }
+
+            a {
+                text-decoration: none;
+                color: @white;
+                display: inline-block;
+
+                font-family: 'Oswald Regular';
+                font-size: 2rem;
+
+                margin-right: 40px;
+
+                &:hover {
+                    color: @orange;
+                }
+            }
+
+            .social_nav {
+                flex: 1;
+                a {
+                    margin-right: 20px;
+                }
+            }
+
+            .user_in {
+                position: relative;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    height: 100%;
+                    width: 2px;
+
+                    left: -30%;
+
+                    background-color: @orange;
+                }
             }
         }
 
-        .user_in {
-            position: relative;
 
-            &::before {
-                content: "";
-                position: absolute;
-                height: 100%;
-                width: 2px;
-
-                left: -30%;
-
-                background-color: @orange;
-            }
-        }
     }
 
     .info_intro {

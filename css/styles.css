@@ -35,7 +35,19 @@
 .section_intro header {
   margin-bottom: 220px;
 }
-.section_intro header a {
+.section_intro header .menu_nav .navbar-toggler {
+  border-color: #ffffff;
+  margin-bottom: 20px;
+  margin-left: 40px;
+}
+.section_intro header .menu_nav .navbar-collapse {
+  justify-content: flex-end;
+}
+.section_intro header .menu_nav .navbar-collapse.show .user_in::before,
+.section_intro header .menu_nav .navbar-collapse.collapsing .user_in::before {
+  width: 0;
+}
+.section_intro header .menu_nav a {
   text-decoration: none;
   color: #ffffff;
   display: inline-block;
@@ -43,13 +55,19 @@
   font-size: 2rem;
   margin-right: 40px;
 }
-.section_intro header a:hover {
+.section_intro header .menu_nav a:hover {
   color: #f8902f;
 }
-.section_intro header .user_in {
+.section_intro header .menu_nav .social_nav {
+  flex: 1;
+}
+.section_intro header .menu_nav .social_nav a {
+  margin-right: 20px;
+}
+.section_intro header .menu_nav .user_in {
   position: relative;
 }
-.section_intro header .user_in::before {
+.section_intro header .menu_nav .user_in::before {
   content: "";
   position: absolute;
   height: 100%;
@@ -465,6 +483,11 @@ p {
 .orange_btn:hover {
   background-color: #894505;
   border: 1px solid #f8902f;
+}
+.social_nav {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 50%;
 }
 .social_nav a {
   margin-right: 20px;
