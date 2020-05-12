@@ -156,6 +156,12 @@
     text-align: center;
   }
 }
+@media (max-width: 576px) {
+  .section_intro {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
 .section_mailing {
   padding: 40px 0;
   background-color: #111111;
@@ -168,6 +174,17 @@
   width: 98%;
   color: #ffffff;
 }
+@media (max-width: 1200px) {
+  .section_mailing p {
+    font-size: 3.6rem;
+  }
+}
+@media (max-width: 992px) {
+  .section_mailing p {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+}
 .section_mailing .form_message {
   display: flex;
   justify-content: space-between;
@@ -176,6 +193,11 @@
 .section_mailing .form_message > div {
   width: 48%;
 }
+@media (max-width: 576px) {
+  .section_mailing .form_message > div {
+    width: 100%;
+  }
+}
 .section_mailing .form_message .message_block .input_row {
   height: calc(60% - 1px);
   margin-bottom: 20px;
@@ -183,6 +205,16 @@
 .section_mailing .form_message .message_block .my_btn {
   width: 50%;
   float: right;
+}
+@media (max-width: 768px) {
+  .section_mailing .form_message .message_block .my_btn {
+    width: 75%;
+  }
+}
+@media (max-width: 576px) {
+  .section_mailing .form_message .message_block .my_btn {
+    width: 100%;
+  }
 }
 .section_mailing .form_message .input_row {
   position: relative;
@@ -241,6 +273,17 @@
 }
 .section_mailing .form_message .input_row:last-child {
   margin-bottom: 0;
+}
+@media (max-width: 576px) {
+  .section_mailing .form_message .input_row:last-child {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 576px) {
+  .section_mailing {
+    padding-top: 20px;
+    padding-bottom: 60px;
+  }
 }
 .section_questions {
   padding-top: 80px;
