@@ -1,10 +1,14 @@
 // main: ../styles.less
 footer {
+    .map_block {
+        height: 100%;
+    }
+
     .contact_block {
         width: 100%;
         height: 100%;
         background-color: @orange;
-        padding: 0;
+        padding: 40px 0;
 
         display: flex;
         flex-direction: column;
@@ -14,10 +18,28 @@ footer {
 
         line-height: 150%;
         letter-spacing: 1%;
+        text-align: center;
+
+        @media (max-width: @width_xl ) {
+            justify-content: flex-start;
+            padding-top: 30px;
+        }
+
+        @media (max-width: @width_lg ) {
+            padding: 20px 0;
+        }
 
         .social_nav {
             padding-top: 45px;
             margin: 0 auto;
+
+            @media (max-width: @width_xl) {
+                padding-top: 30px;
+            }
+
+            @media (max-width: @width_lg) {
+                padding-top: 20px;
+            }
 
             i:hover {
                 color: @white;
@@ -31,6 +53,13 @@ footer {
             text-transform: uppercase;
             margin-bottom: 90px;
 
+            @media (max-width: @width_xl) {
+                margin-bottom: 40px;
+            }
+
+            @media (max-width: @width_sm) {
+                font-size: 3.6rem;
+            }
         }
 
         .contact_row {
@@ -38,6 +67,10 @@ footer {
             font-family: 'Roboto Regular';
             font-size: 2.4rem;
             margin-bottom: 45px;
+
+            @media (max-width: @width_xl ) {
+                margin-bottom: 20px;
+            }
 
             img {
                 margin-right: 10px;

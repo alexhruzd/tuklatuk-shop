@@ -13,6 +13,12 @@
         letter-spacing: 1%;
 
         margin-bottom: 20px;
+
+        @media (max-width: @width_sm) {
+            font-size: 3.6rem;
+            margin-bottom: 5px;
+        }
+
     }
 
     .carousel_review {
@@ -42,10 +48,18 @@
                 .review {
                     padding-left: 60px;
 
+                    @media (max-width: @width_lg) {
+                        padding-left: 0;
+                    }
+
                     .quote_review {
                         font-family: 'Roboto Medium Italic';
                         color: @input_color;
                         font-size: 2.4rem;
+
+                        @media (max-width: @width_sm) {
+                            font-size: 1.6rem;
+                        }
                     }
 
                     .autor_review {
@@ -54,6 +68,10 @@
                         color: @mailing_bg;
                         font-size: 3.6rem;
                         position: relative;
+
+                        @media (max-width: @width_lg) {
+                            font-size: 2.4rem;
+                        }
 
                         &:before {
                             content: '';
@@ -67,12 +85,17 @@
                     }
                 }
 
+                .quote_img {
+                    img {
+                        border-radius: 50%;
+                        height: 200px;
+                    }
 
-
-                img {
-                    border-radius: 50%;
-                    height: 200px;
+                    @media (max-width: @width_lg) {
+                        display: none;
+                    }
                 }
+
             }
         }
 
