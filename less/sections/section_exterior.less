@@ -10,6 +10,10 @@
             .img_slide {
                 width: 60%;
                 float: right;
+
+                @media (max-width: @width_xl) {
+                    width: 100%;
+                }
             }
 
             img {
@@ -34,15 +38,41 @@
 
                 padding: 0 80px;
 
+                @media (max-width: 1400px) {
+                    width: 60%;
+                    height: 70%;
+                }
+
+                @media (max-width: @width_xl) {
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(rgba(1, 1, 1, 0.5), rgba(1, 1, 1, 0.5));
+                    text-align: center;
+                }
+
+                @media (max-width: @width_sm) {
+                    justify-content: flex-start;
+                    padding: 5px 5px;
+                }
+
                 h3 {
                     font-family: 'Oswald Medium';
                     font-size: 4.8rem;
                     margin-bottom: 40px;
+
+                    @media (max-width: @width_sm) {
+                        font-size: 3.2rem;
+                        margin-bottom: 10px;
+                    }
                 }
 
                 p {
                     font-family: 'Roboto Regular';
                     font-size: 1.6rem;
+
+                    @media (max-width: @width_sm) {
+                        font-size: 1.2rem;
+                    }
                 }
             }
         }
@@ -55,10 +85,33 @@
             left: 22%;
             bottom: 5%;
 
+            @media (max-width: 1600px) {
+                width: 17%;
+                left: 20%;
+            }
+
+            @media (max-width: 1400px) {
+                width: 20%;
+                left: 17%;
+            }
+
+            @media (max-width: @width_xl) {
+                width: 50%;
+                left: 25%;
+            }
+
+            @media (max-width: @width_sm) {
+                width: 50%;
+                left: 25%;
+                bottom: 10%;
+            }
+
+
             .num_slide_block {
                 position: absolute;
                 left: 50%;
                 transform: translate(-50%, -50%);
+                z-index: 10;
 
                 span {
                     color: @mailing_bg;
@@ -66,6 +119,15 @@
                     font-family: 'Oswald Regular';
                     line-height: 150%;
                     letter-spacing: 1%;
+
+                    @media (max-width: @width_xl) {
+                        color: @white;
+                        -webkit-text-stroke: 1px @mailing_bg;
+                    }
+
+                    @media (max-width: @width_md) {
+                        font-size: 3.6rem;
+                    }
 
                     &.count_white {
                         color: @white;
@@ -80,50 +142,17 @@
                 font-size: 7.8rem;
                 opacity: 1;
 
+                @media (max-width: @width_xl) {
+                    color: @white;
+                    -webkit-text-stroke: 4px @mailing_bg;
+                }
+
                 &:hover {
                     //opacity: .7;
                     color: @orange;
-
                     -webkit-text-stroke: 4px @mailing_bg;
-
                 }
             }
-
-            /*.arrow_control {
-                position: relative;
-                width: 50px;
-                height: 30px;
-                opacity: 1;
-
-                :hover {
-                    opacity: .7;
-
-                }
-            }
-
-            .arrow_prev {
-                .arrow_icon {
-                    background-image: url("@{img_path}/arrow_prev.png");
-                    background-size: cover;
-                    background-position: center;
-
-                    width: 100%;
-                    height: 100%;
-
-                }
-            }
-            .arrow_next {
-                .arrow_icon {
-                    background-image: url("@{img_path}/arrow_next.png");
-                    background-size: cover;
-                    background-position: center;
-
-                    width: 100%;
-                    height: 100%;
-
-                }
-            }*/
-
         }
     }
 }

@@ -364,6 +364,11 @@
   width: 60%;
   float: right;
 }
+@media (max-width: 1200px) {
+  .section_exterior .carousel_exterior .slide_item .img_slide {
+    width: 100%;
+  }
+}
 .section_exterior .carousel_exterior .slide_item img {
   width: 100%;
   height: 100%;
@@ -382,14 +387,45 @@
   background: linear-gradient(rgba(1, 1, 1, 0.8), rgba(1, 1, 1, 0.8));
   padding: 0 80px;
 }
+@media (max-width: 1400px) {
+  .section_exterior .carousel_exterior .slide_item .info_slide {
+    width: 60%;
+    height: 70%;
+  }
+}
+@media (max-width: 1200px) {
+  .section_exterior .carousel_exterior .slide_item .info_slide {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(1, 1, 1, 0.5), rgba(1, 1, 1, 0.5));
+    text-align: center;
+  }
+}
+@media (max-width: 576px) {
+  .section_exterior .carousel_exterior .slide_item .info_slide {
+    justify-content: flex-start;
+    padding: 5px 5px;
+  }
+}
 .section_exterior .carousel_exterior .slide_item .info_slide h3 {
   font-family: 'Oswald Medium';
   font-size: 4.8rem;
   margin-bottom: 40px;
 }
+@media (max-width: 576px) {
+  .section_exterior .carousel_exterior .slide_item .info_slide h3 {
+    font-size: 3.2rem;
+    margin-bottom: 10px;
+  }
+}
 .section_exterior .carousel_exterior .slide_item .info_slide p {
   font-family: 'Roboto Regular';
   font-size: 1.6rem;
+}
+@media (max-width: 576px) {
+  .section_exterior .carousel_exterior .slide_item .info_slide p {
+    font-size: 1.2rem;
+  }
 }
 .section_exterior .carousel_exterior .control_block {
   position: absolute;
@@ -398,45 +434,37 @@
   width: 15%;
   left: 22%;
   bottom: 5%;
-  /*.arrow_control {
-                position: relative;
-                width: 50px;
-                height: 30px;
-                opacity: 1;
-
-                :hover {
-                    opacity: .7;
-
-                }
-            }
-
-            .arrow_prev {
-                .arrow_icon {
-                    background-image: url("@{img_path}/arrow_prev.png");
-                    background-size: cover;
-                    background-position: center;
-
-                    width: 100%;
-                    height: 100%;
-
-                }
-            }
-            .arrow_next {
-                .arrow_icon {
-                    background-image: url("@{img_path}/arrow_next.png");
-                    background-size: cover;
-                    background-position: center;
-
-                    width: 100%;
-                    height: 100%;
-
-                }
-            }*/
+}
+@media (max-width: 1600px) {
+  .section_exterior .carousel_exterior .control_block {
+    width: 17%;
+    left: 20%;
+  }
+}
+@media (max-width: 1400px) {
+  .section_exterior .carousel_exterior .control_block {
+    width: 20%;
+    left: 17%;
+  }
+}
+@media (max-width: 1200px) {
+  .section_exterior .carousel_exterior .control_block {
+    width: 50%;
+    left: 25%;
+  }
+}
+@media (max-width: 576px) {
+  .section_exterior .carousel_exterior .control_block {
+    width: 50%;
+    left: 25%;
+    bottom: 10%;
+  }
 }
 .section_exterior .carousel_exterior .control_block .num_slide_block {
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 10;
 }
 .section_exterior .carousel_exterior .control_block .num_slide_block span {
   color: #111111;
@@ -444,6 +472,17 @@
   font-family: 'Oswald Regular';
   line-height: 150%;
   letter-spacing: 1%;
+}
+@media (max-width: 1200px) {
+  .section_exterior .carousel_exterior .control_block .num_slide_block span {
+    color: #ffffff;
+    -webkit-text-stroke: 1px #111111;
+  }
+}
+@media (max-width: 768px) {
+  .section_exterior .carousel_exterior .control_block .num_slide_block span {
+    font-size: 3.6rem;
+  }
 }
 .section_exterior .carousel_exterior .control_block .num_slide_block span.count_white {
   color: #ffffff;
@@ -453,6 +492,12 @@
   color: #111111;
   font-size: 7.8rem;
   opacity: 1;
+}
+@media (max-width: 1200px) {
+  .section_exterior .carousel_exterior .control_block .arrow_control {
+    color: #ffffff;
+    -webkit-text-stroke: 4px #111111;
+  }
 }
 .section_exterior .carousel_exterior .control_block .arrow_control:hover {
   color: #f8902f;
