@@ -58,6 +58,7 @@ p {
     display: flex;
     justify-content: flex-start;
     max-width: 50%;
+
     a {
         margin-right: 20px;
     }
@@ -74,10 +75,17 @@ p {
 }
 
 
-@media (min-width: 1200px) {
+@media (min-width: @width_xl) {
     .container {
         max-width: 1780px;
     }
+}
+
+@media (max-width: @width_lg) {
+    html {
+        font-size: 8px;
+    }
+
 }
 
 .container-fluid {
